@@ -782,7 +782,9 @@ public class CompilatioReviewServiceImpl extends BaseReviewServiceImpl {
 					} else {
 						return item;
 					}
-				} catch (IdUnusedException | PermissionException | NullPointerException e) {
+				} catch (NullPointerException e) {
+					log.warn("Assignment no longer exists: " + item.getId());
+				} catch (IdUnusedException | PermissionException e) {
 					log.error("Error getting assignment for item "+item.getId(), e);
 				}
 			}
