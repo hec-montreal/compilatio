@@ -616,9 +616,9 @@ public class CompilatioReviewServiceImpl extends BaseReviewServiceImpl {
 		String urlBase = "/sakai-contentreview-tool-federated/images/score_";
 		String suffix = ".gif";
 
-		if (score.compareTo(Long.valueOf(5)) <= 0) {
+		if (score.compareTo(Long.valueOf(10)) <= 0) {
 			return urlBase + "green" + suffix;
-		} else if (score.compareTo(Long.valueOf(20)) <= 0) {
+		} else if (score.compareTo(Long.valueOf(25)) <= 0) {
 			return urlBase + "orange" + suffix;
 		} else {
 			return urlBase + "red" + suffix;
